@@ -158,21 +158,20 @@ span {
 .category {
     transition: 0.1s;
     border-radius: 0px 0.2rem 0.2rem 0px;
-    /* animation: categoryload 0.3s ; */
     white-space: nowrap;
 }
-.category:last-child{   
-    /* margin-top: auto;  */
-}
+
 .category:hover  {
-    background-color: var(--primary-light);
+    /* background-color: var(--primary-light); */
+    /* background: linear-gradient(90deg, var(--text-highlight) 0%, transparent 30%);*/
 }
 .category:hover a{
-    transform: scale(1.1);
-    transform-origin: left;
+    /* transform: scale(1.1);
+    transform-origin: left; */
+    
 }
 #sidemenu:not(.collapsed) .active{
-    background-color:var(--primary-light, #282c41);
+    /* background-color:var(--primary-light, #282c41); */
     border-left: 0.5vh solid var(--text-highlight,#f7768e);
 }
 .active a, .active .fas{
@@ -183,7 +182,7 @@ span {
     transform-origin: left;
 }
 .active:hover {
-    background-color: var(--primary-light, #282c41);
+    /* background-color: var(--primary-light, #282c41); */
 }
 .active:hover a, .active:hover .fas{
     color: var(--text-highlight,#f7768e);

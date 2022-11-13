@@ -40,12 +40,16 @@ main form #inputs label svg {
   position: absolute;
   left: -2.5rem;
 }
-main form #inputs label input, main form #inputs label textarea {
+main form #inputs label input,
+main form #inputs label textarea,
+main form #inputs label select {
   flex: 1;
   background: none;
   transition: 0.1s;
 }
-main form #inputs label input:focus, main form #inputs label textarea:focus {
+main form #inputs label input:focus,
+main form #inputs label textarea:focus,
+main form #inputs label select:focus {
   outline: none;
   box-shadow: 0 0 10px #f02662;
   border: 1px solid #f02662;
@@ -80,7 +84,6 @@ main form #upload-button #fileupload {
 }
 
 .area {
-  /* box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2) inset; */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
