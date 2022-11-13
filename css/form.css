@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #060a11;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main form #inputs {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+main form #inputs label {
+  display: flex;
+  align-items: center;
+  color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+  gap: 0.5rem;
+  transition: 0.1s;
+}
+main form #inputs label:focus-within {
+  color: #f02662;
+}
+main form #inputs label svg {
+  width: 1.5rem;
+  color: inherit;
+  position: absolute;
+  left: -2.5rem;
+}
+main form #inputs label input, main form #inputs label textarea {
+  flex: 1;
+  background: none;
+  transition: 0.1s;
+}
+main form #inputs label input:focus, main form #inputs label textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #f02662;
+  border: 1px solid #f02662;
+}
+main form #inputs #question svg {
+  align-self: baseline;
+}
+main form #upload-button label {
+  background: linear-gradient(288.43deg, #ff1e56, #9c51a1);
+  box-shadow: 0 0 10px #f02662;
+  border: none;
+  cursor: pointer;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  gap: 0.5rem;
+  transition: 0.3s;
+}
+main form #upload-button label button {
+  display: none;
+}
+main form #upload-button label svg {
+  width: 1.5rem;
+}
+main form #upload-button label:hover {
+  box-shadow: 0 0 20px #f02662;
+}
+main form #upload-button #fileupload {
+  display: none;
+}
+
+.area {
+  /* box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2) inset; */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #eee;
+  color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: medium;
+}
