@@ -14,6 +14,12 @@
 
 const logo = document.getElementById("logo");
 const side_menu = document.getElementById("sidemenu");
+const file_upload = document.getElementById('file-upload');
+
+file_upload.addEventListener("change", handleFiles, false);
+function handleFiles() {
+ document.getElementById('chosen-file').textContent = this.files[0].name
+}
 
 logo.addEventListener("click", () => {
     side_menu.classList.toggle("collapsed");
