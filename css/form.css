@@ -23,7 +23,24 @@ main form #inputs {
   gap: 0.5rem;
   position: relative;
 }
-main form #inputs label {
+main form #inputs #stars {
+  display: flex;
+  justify-content: center;
+}
+main form #inputs #stars .star svg {
+  width: 3rem;
+  aspect-ratio: 1;
+}
+main form #inputs #stars .star input {
+  opacity: 0;
+}
+main form #inputs #stars .star input:checked + svg {
+  color: #f02662;
+}
+main form #inputs #stars .star:has(> input:checked) {
+  display: none;
+}
+main form #inputs label:not(.star) {
   display: flex;
   align-items: center;
   color: #eee;
@@ -31,37 +48,37 @@ main form #inputs label {
   gap: 0.5rem;
   transition: 0.1s;
 }
-main form #inputs label:focus-within {
+main form #inputs label:not(.star):focus-within {
   color: #f02662;
 }
-main form #inputs label svg {
+main form #inputs label:not(.star) svg {
   width: 1.5rem;
   color: inherit;
   position: absolute;
   left: -2.5rem;
 }
-main form #inputs label input,
-main form #inputs label textarea,
-main form #inputs label select {
+main form #inputs label:not(.star) input,
+main form #inputs label:not(.star) textarea,
+main form #inputs label:not(.star) select {
   flex: 1;
   background: none;
   transition: 0.1s;
 }
-main form #inputs label input:focus,
-main form #inputs label textarea:focus,
-main form #inputs label select:focus {
+main form #inputs label:not(.star) input:focus,
+main form #inputs label:not(.star) textarea:focus,
+main form #inputs label:not(.star) select:focus {
   outline: none;
   box-shadow: 0 0 10px #f02662;
   border: 1px solid #f02662;
 }
-main form #inputs label#file {
+main form #inputs label:not(.star)#file {
   margin-top: 1rem;
   align-items: center;
 }
-main form #inputs label#file #chosen-file {
+main form #inputs label:not(.star)#file #chosen-file {
   margin-left: auto;
 }
-main form #inputs label#file label {
+main form #inputs label:not(.star)#file label {
   background-color: none;
   color: white;
   font-family: sans-serif;

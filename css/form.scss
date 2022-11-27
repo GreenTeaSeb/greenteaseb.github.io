@@ -27,7 +27,28 @@ main {
             gap: calc($padding/2);
             position: relative;
 
-            label {
+            #stars{
+                display: flex;
+                justify-content: center;
+                .star{
+                    // flex: 1;
+                    svg{
+                        width: 3rem;
+                        aspect-ratio: 1;
+                    }
+                    input{
+                        opacity: 0;
+                    
+                        &:checked + svg{
+                            color: #f02662
+                        }
+                    }
+                }
+                .star:has(> input:checked ){
+                    display: none;
+                }
+            }
+            label:not(.star) {
 
                 display: flex;
                 align-items: center;
