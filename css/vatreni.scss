@@ -6,12 +6,12 @@ body {
     height: 100vh;
     background: black;
     overflow: clip;
-    background: radial-gradient(circle at center, rgb(89, 27, 27), black 100%)
+    background: radial-gradient(circle at center, #202020, black 100%)
 }
 
 #particles-js {
     position: relative;
-    filter: drop-shadow(0 0 0.75rem #ff992b);
+    // filter: drop-shadow(0 0 0.75rem #ff992b);
     z-index: 2;
     height: 100%;
     width: 100%;
@@ -52,15 +52,16 @@ main {
     p {
         color: white;
         font-family: 'Oswald', sans-serif;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 3rem;
+        // font-family: 'Roboto Condensed', sans-serif;
     }
 
     #top {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        #logo {
+        gap: 3rem;
+        .logo {
             width: 15rem;
         }
     }

@@ -1,4 +1,4 @@
-particlesJS.load('particles-js', 'particles.json', function () {
+particlesJS.load('particles-js', 'rain.json', function () {
     console.log('callback - particles.js config loaded');
 });
 
@@ -25,7 +25,7 @@ const update = () => {
     if (!audio.paused) {
         analyser.getByteTimeDomainData(dataArray);
         const radius = Math.max.apply(Math, dataArray) / 5
-        document.body.style.background = `radial-gradient(circle at center, rgb(70, 27, 27) 1% , rgb(89, 27, 27) ${radius}%, black 100%)`
+        document.body.style.background = `radial-gradient(circle at center, #1515151 1% , #202020 ${radius}%, black 100%)`
         console.log(radius);
     }
 }
